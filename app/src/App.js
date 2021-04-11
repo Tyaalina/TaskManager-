@@ -30,15 +30,11 @@ export default function ToDoApp() {
   const classes = useStyles();
   const [tasks, setTasks] = useState([])
 
-  async function handleSubmit(input) {
-    console.log(input)
-  }
-
   return (
     <div className={classes.root}>
       <Paper elevation={5} className={classes.paper}>
         <Typography align="center" variant="h6" gutterBottom="true">TO DO LIST</Typography>
-        <InputTask handleSubmit={handleSubmit} />
+        <InputTask />
         <TaskTab />
         <Grid container justify='center'>
           <Button
